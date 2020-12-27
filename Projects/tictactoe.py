@@ -16,6 +16,8 @@ square7 = 0
 square8 = 0
 square9 = 0
 
+current_player = 1
+
 # loop 9 times
 for go in range (9):
     # draw board 
@@ -103,9 +105,34 @@ for go in range (9):
 
 
     # get player input
+    if current_player == 1:
+        print("Player X' turn")
+    else:
+        print("Player O's turn")
+    position = input("Enter the square number you want ")
 
-    #
+    if position == "1":
+        square1 = current_player
+    elif position == "2":
+        square2 = current_player
+    elif position == "3":
+        square2 = current_player
+    elif position == "4":
+        square2 = current_player
+    elif position == "5":
+        square2 = current_player
+    elif position == "6":
+        square2 = current_player
+    elif position == "7":
+        square2 = current_player
+    elif position == "8":
+        square2 = current_player
+    elif position == "9":
+        square2 = current_player
+    
 
-    #
+    # check for winner
+
+    # end loop
 
     #
