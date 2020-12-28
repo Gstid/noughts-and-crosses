@@ -116,23 +116,60 @@ for go in range (9):
     elif position == "2":
         square2 = current_player
     elif position == "3":
-        square2 = current_player
+        square3 = current_player
     elif position == "4":
-        square2 = current_player
+        square4 = current_player
     elif position == "5":
-        square2 = current_player
+        square5 = current_player
     elif position == "6":
-        square2 = current_player
+        square6 = current_player
     elif position == "7":
-        square2 = current_player
+        square7 = current_player
     elif position == "8":
-        square2 = current_player
+        square8 = current_player
     elif position == "9":
-        square2 = current_player
+        square9 = current_player
+    
+    if current_player == 1:
+        current_player = 2
+    else:
+        current_player = 1
     
 
     # check for winner
+    winner = 0
+
+    #rows
+    if (square1 != 0) and (square1 == square 4 == square7):
+        # win
+        winner = square1
+        break
+    elif (square2 != 0) and (square2 == square 5 == square8):
+        # win
+        winner = square2
+        break
+    elif (square3 != 0) and (square3 == square 6 == square9):
+        # win
+        winner = square3
+        break
+
+    #diagonals
+    elif (square1 != 0) and (square1 == square 5 == square9):
+        # win
+        winner = square1
+        break
+    elif (square3 != 0) and (square3 == square 5 == square7):
+        # win
+        winner = square3
+        break
 
     # end loop
 
-    #
+# winner has the winning player or 0
+
+if winner == 0:
+    print("DRAW")
+elif winner == 1:
+    print("X HAS WON")
+else:
+    print("O HAS WON")
